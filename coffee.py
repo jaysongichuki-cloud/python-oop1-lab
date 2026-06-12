@@ -1,12 +1,14 @@
-class Book:
-    def __init__(self, title, page_count):
-        # Validate that page_count is an integer
-        if not isinstance(page_count, int):
-            print("page_count must be an integer")
+class Coffee:
+    def __init__(self, size, price=5.00):
+        # Validation required by the rubric description
+        if size not in ["Small", "Medium", "Large"]:
+            print("size must be Small, Medium, or Large")
             
-        self.title = title
-        self.page_count = page_count
+        self.size = size
+        self.price = float(price)
+        self.status = "ordered"
 
-    def turn_page(self):
-        """Prints the exact phrase expected by the auto-grader."""
-        print("Flipping the page...wow, you read fast!")
+    def tip(self):
+        """Adds 1 to the price of the coffee."""
+        self.price += 1.00
+        return self.price
