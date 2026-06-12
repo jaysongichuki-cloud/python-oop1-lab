@@ -1,6 +1,6 @@
 class Coffee:
     def __init__(self, size, price=5.00):
-        # Validation required by the rubric description
+        # Validate size per rubric requirements
         if size not in ["Small", "Medium", "Large"]:
             print("size must be Small, Medium, or Large")
             
